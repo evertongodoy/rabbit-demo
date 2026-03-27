@@ -1,0 +1,70 @@
+{
+  "rabbit_version": "3.13.0",
+  "users": [
+    {
+      "name": "guest",
+      "password_hash": "7is14oC9W4ENOeyD29igolhQhTJF42+IrA9GdoS5qUMl9ZFK",
+      "hashing_algorithm": "rabbit_password_hashing_sha256",
+      "tags": "administrator"
+    }
+  ],
+  "vhosts": [
+    {
+      "name": "/"
+    }
+  ],
+  "permissions": [
+    {
+      "user": "guest",
+      "vhost": "/",
+      "configure": ".*",
+      "write": ".*",
+      "read": ".*"
+    }
+  ],
+  "exchanges": [
+    {
+      "name": "demo.exchange",
+      "vhost": "/",
+      "type": "direct",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    }
+  ],
+  "queues": [
+    {
+      "name": "demo.queue-1",
+      "vhost": "/",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {}
+    },
+    {
+      "name": "demo.queue-2",
+      "vhost": "/",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {}
+    }
+  ],
+  "bindings": [
+    {
+      "source": "demo.exchange",
+      "vhost": "/",
+      "destination": "demo.queue-1",
+      "destination_type": "queue",
+      "routing_key": "demo.routing.key-1",
+      "arguments": {}
+    },
+    {
+      "source": "demo.exchange",
+      "vhost": "/",
+      "destination": "demo.queue-2",
+      "destination_type": "queue",
+      "routing_key": "demo.routing.key-2",
+      "arguments": {}
+    }
+  ]
+}

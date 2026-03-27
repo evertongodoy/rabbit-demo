@@ -18,7 +18,47 @@
 *.zip
 *.tar.gz
 *.rar
+*.metadata
+*RemoteSystemsTempFiles
+
+# Ant build folder
+.ant/
+# Ant dentro do NETCommon
+NETCommon/.ant/
+NETSales/.ant/
+NETCommon/build/
+NETSales/build/
+*.sig
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+# IntelliJ IDEA
+.idea/
+*.iml
+out/
+target/
+.mvn/
+/target/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Maven / Gradle
+build/
+
+# IDE-specific files
+.vscode/
+.classpath
+.project
+.settings/
+.gitattributes
+
+HELP.md
+mvnw
+mvnw.cmd
+
+# Certificates
+fix-certificate/

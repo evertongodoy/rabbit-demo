@@ -1,0 +1,24 @@
+server:
+  port: '8080'
+
+spring:
+  application:
+    name: rabbit-demo
+  rabbitmq:
+    password: guest
+    port: '5672'
+    host: localhost
+    username: guest
+    virtual-host: /
+
+rabbitmq:
+  queue2: demo.queue-2
+  queue1: demo.queue-1
+  exchange: demo.exchange
+  routing-key1: demo.routing.key-1
+  routing-key2: demo.routing.key-2
+
+logging:
+  level:
+    com:
+      demo: DEBUG
